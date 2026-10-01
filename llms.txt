@@ -1,0 +1,8 @@
+# The Coin Wire
+
+> Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next.
+
+## Key pages
+- [Homepage](https://cryptoworldtoday.github.io/): latest reporting and analysis.
+- [About](https://cryptoworldtoday.github.io/about/): editorial scope, independence, sourcing and corrections.
+- [Archive](https://cryptoworldtoday.github.io/archive/): everything published.
