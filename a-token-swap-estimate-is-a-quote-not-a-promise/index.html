@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token swap estimate: check price, fees and slippage</title>
+<meta name="description" content="A token swap estimate combines pool price, fees, route depth and slippage; checking those parts before signing shows what can change before on-chain settlement.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/a-token-swap-estimate-is-a-quote-not-a-promise/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="A token swap estimate is a quote, not a promise">
+<meta property="og:description" content="A token swap estimate combines pool price, fees, route depth and slippage; checking those parts before signing shows what can change before on-chain settlement.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/a-token-swap-estimate-is-a-quote-not-a-promise/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/a-token-swap-estimate-is-a-quote-not-a-promise-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A token swap estimate is a quote, not a promise"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A token swap estimate is a quote, not a promise">
+<meta name="twitter:description" content="A token swap estimate combines pool price, fees, route depth and slippage; checking those parts before signing shows what can change before on-chain settlement.">
+<meta property="article:published_time" content="2026-10-03T22:49:11+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/a-token-swap-estimate-is-a-quote-not-a-promise/#webpage",
+      "url": "https://cryptoworldtoday.github.io/a-token-swap-estimate-is-a-quote-not-a-promise/",
+      "name": "Token swap estimate: check price, fees and slippage",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/a-token-swap-estimate-is-a-quote-not-a-promise/#article",
+      "headline": "A token swap estimate is a quote, not a promise",
+      "isAccessibleForFree": true,
+      "description": "A token swap estimate combines pool price, fees, route depth and slippage; checking those parts before signing shows what can change before on-chain settlement.",
+      "datePublished": "2026-10-03T22:49:11+00:00",
+      "dateModified": "2026-10-03T22:49:11+00:00",
+      "url": "https://cryptoworldtoday.github.io/a-token-swap-estimate-is-a-quote-not-a-promise/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/a-token-swap-estimate-is-a-quote-not-a-promise/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 1010,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/a-token-swap-estimate-is-a-quote-not-a-promise-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/a-token-swap-estimate-is-a-quote-not-a-promise-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/a-token-swap-estimate-is-a-quote-not-a-promise-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "A token swap estimate is a quote, not a promise",
+          "item": "https://cryptoworldtoday.github.io/a-token-swap-estimate-is-a-quote-not-a-promise/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>A token swap estimate is a quote, not a promise</h1>
+<p class="s49052b3">A token swap estimate combines pool price, fees, route depth and slippage; checking those parts before signing shows what can change before on-chain settlement.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-10-03T22:49:11+00:00">Oct 3, 2026</time><span>6 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img fetchpriority="high" class="sbc2bd0b" src="/assets/covers/a-token-swap-estimate-is-a-quote-not-a-promise.jpg" alt="A token swap estimate is a quote, not a promise"></figure>    <div class="s2d06d8e"><p>A token swap estimate shows the expected output, route and costs before a transaction is signed, but it cannot guarantee the amount that will settle. The shift from reading a pool’s displayed price to inspecting a complete quote matters because the displayed price leaves out trade size, fees and changes while a transaction is pending. A useful estimate separates those parts so you can judge whether the quoted output is acceptable and set a minimum before authorizing the trade.</p>
+
+<h2>How does a token swap estimate work?</h2>
+
+<p>A swap estimate simulates a trade against available liquidity and reports the output the route would produce at that moment. In a liquidity pool, the price depends on the pool’s token balances and the pool’s pricing rule; a trade changes those balances, so a larger order can receive a worse average price than the rate shown for a small one. The quote is therefore an estimate for a particular input amount, route and time, rather than a standing offer.</p>
+
+<p>Some swaps use one pool, while others route through multiple pools or intermediate tokens to find a better expected result. A split route can draw on several pools, but more steps may add fees and make the transaction harder to assess. For a fuller explanation of how trade types affect execution, see <a href="https://ellayloq195832.qodsblog.com/43086597/fermi-swap-2026-four-trade-types-and-when-to-use-each" rel="noopener">fermi swap</a>. In either case, the quote should identify the assets being exchanged and the estimated output, not just a headline exchange rate.</p>
+
+<p>Read the estimate as a set of components:</p>
+
+<ul>
+<li><strong>Expected output:</strong> the amount the route predicts you will receive before settlement.</li>
+<li><strong>Price impact:</strong> the effect your trade has on the pool price, distinct from later market movement.</li>
+<li><strong>Route and pool fees:</strong> charges applied by the pools used along the path.</li>
+<li><strong>Network cost:</strong> the fee for submitting and processing the transaction, usually paid in the chain’s native asset.</li>
+</ul>
+
+<p>Interfaces do not always display these components in the same place. Check whether a quoted “received” amount is before or after protocol fees, and whether the network fee is included. A comparison is meaningful only when the input amount, route assumptions and fee treatment match.</p>
+
+<h2>What can change between the estimate and settlement?</h2>
+
+<p>The amount received can change because the transaction executes against conditions on-chain, which may differ from those used to generate the quote. Other trades can move pool balances before yours is processed. Network congestion can also delay inclusion, giving prices more time to move. The estimate is a snapshot; the transaction’s minimum-output setting is the bound that determines whether it can proceed at a worse rate.</p>
+
+<p>Slippage tolerance sets how far execution may move from the quoted result before the transaction reverts. A tighter tolerance protects the output but can cause a failed transaction if the market moves slightly. A looser tolerance makes execution more likely to complete through movement, while allowing a lower output. It does not improve the quote or guarantee a better price.</p>
+
+<p>Before signing, check the minimum amount you are willing to receive. Many swap transactions encode that amount as a minimum output; if the route cannot meet it, the swap should fail rather than settle below the limit. Confirm that the displayed minimum matches your own threshold, especially when the quote has changed after you entered the amount. A failed transaction may still incur a network fee because the chain processed the attempt.</p>
+
+<p>Price impact and slippage are related in the final outcome but describe different things. Price impact comes from the trade’s size relative to available liquidity and is reflected in the current quote. Slippage is the permitted movement between quote and execution. A large trade in a shallow pool can have material price impact even with a low slippage setting; a small trade can face execution movement if the market changes while it waits.</p>
+
+<h2>How should you compare quotes before signing?</h2>
+
+<p>Compare the minimum output and total costs for the same input amount, rather than choosing the route with the most attractive displayed rate. A route with more pools may quote a higher output but incur additional fees or depend on several pools remaining usable. A direct route may be easier to inspect yet produce less output if its pool has less depth. The better choice for most readers is the route with a clear minimum received and a sensible total cost, not the one with the best isolated price figure.</p>
+
+<p>For a practical check, pause at the confirmation screen and verify:</p>
+
+<ul>
+<li>The input token and amount, including the network on which the swap will execute.</li>
+<li>The estimated output, minimum output and slippage setting.</li>
+<li>The route, any displayed price impact, pool fees and network fee.</li>
+<li>Any token approval requested, including which token and spending allowance it covers.</li>
+</ul>
+
+<p>Token approval is separate from the swap itself: it authorizes a contract to use a specified token amount, while the swap instruction performs the exchange. Read the approval prompt before signing, and check that the requested token and allowance make sense for the trade. If the quote changes materially while you review it, refresh the estimate and reassess the minimum instead of relying on the earlier numbers.</p>
+
+<h2>When is a quote good enough to use?</h2>
+
+<p>A quote is useful when you can explain its likely output, the lowest output you will accept and the costs required to attempt the trade. For a small, liquid swap, the difference between quoted and settled output may be modest, but the same displayed rate says little about a large order or a route through thin pools. If the minimum output is unacceptable or the fee is large relative to the trade, wait, reduce the size or compare another route.</p>
+
+<p>The signals to watch are the gap between expected and minimum output, the route’s pool depth, the network fee and whether the quote remains stable when refreshed. Those figures reveal the trade-off: a better expected rate can come with more route complexity, while a tighter minimum protects the result at the cost of more failed attempts. Signing makes sense only when the minimum is an amount you are prepared to receive.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/reading-a-bnb-chain-wallets-token-history/">Reading a BNB Chain Wallet’s Token History</a></li><li class="sc1f35f8"><a class="s48db07b" href="/sec-proposes-conditional-self-custody-for-crypto-funds/">SEC proposes conditional self-custody for crypto funds</a></li><li class="sc1f35f8"><a class="s48db07b" href="/a-token-pause-can-stall-one-leg-of-a-polygon-bridge-transfer/">A Token Pause Can Stall One Leg of a Polygon Bridge Transfer</a></li><li class="sc1f35f8"><a class="s48db07b" href="/utexo-plans-to-bring-usdt-back-to-bitcoin-through-rgb/">Utexo plans to bring USDT back to Bitcoin through RGB</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a></nav>
+    <p class="s3c435f0">Independent coverage — not investment advice.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
