@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avalanche Pool Prices and Smart Contract Risk</title>
+<meta name="description" content="A pool’s spot price describes its current balance, not a reliable market value; thin liquidity, trade size and oracle design can change what a contract should trust.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/why-avalanche-pool-prices-can-mislead-smart-contracts/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why Avalanche Pool Prices Can Mislead Smart Contracts">
+<meta property="og:description" content="A pool’s spot price describes its current balance, not a reliable market value; thin liquidity, trade size and oracle design can change what a contract should trust.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/why-avalanche-pool-prices-can-mislead-smart-contracts/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/why-avalanche-pool-prices-can-mislead-smart-contracts-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why Avalanche Pool Prices Can Mislead Smart Contracts"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Avalanche Pool Prices Can Mislead Smart Contracts">
+<meta name="twitter:description" content="A pool’s spot price describes its current balance, not a reliable market value; thin liquidity, trade size and oracle design can change what a contract should trust.">
+<meta property="article:published_time" content="2026-10-04T00:30:08+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/why-avalanche-pool-prices-can-mislead-smart-contracts/#webpage",
+      "url": "https://cryptoworldtoday.github.io/why-avalanche-pool-prices-can-mislead-smart-contracts/",
+      "name": "Avalanche Pool Prices and Smart Contract Risk",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/why-avalanche-pool-prices-can-mislead-smart-contracts/#article",
+      "headline": "Why Avalanche Pool Prices Can Mislead Smart Contracts",
+      "isAccessibleForFree": true,
+      "description": "A pool’s spot price describes its current balance, not a reliable market value; thin liquidity, trade size and oracle design can change what a contract should trust.",
+      "datePublished": "2026-10-04T00:30:08+00:00",
+      "dateModified": "2026-10-04T00:30:08+00:00",
+      "url": "https://cryptoworldtoday.github.io/why-avalanche-pool-prices-can-mislead-smart-contracts/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/why-avalanche-pool-prices-can-mislead-smart-contracts/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 954,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-avalanche-pool-prices-can-mislead-smart-contracts-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-avalanche-pool-prices-can-mislead-smart-contracts-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-avalanche-pool-prices-can-mislead-smart-contracts-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why Avalanche Pool Prices Can Mislead Smart Contracts",
+          "item": "https://cryptoworldtoday.github.io/why-avalanche-pool-prices-can-mislead-smart-contracts/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>Why Avalanche Pool Prices Can Mislead Smart Contracts</h1>
+<p class="s49052b3">A pool’s spot price describes its current balance, not a reliable market value; thin liquidity, trade size and oracle design can change what a contract should trust.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-10-04T00:30:08+00:00">Oct 4, 2026</time><span>5 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img fetchpriority="high" class="sbc2bd0b" src="/assets/covers/why-avalanche-pool-prices-can-mislead-smart-contracts.jpg" alt="Why Avalanche Pool Prices Can Mislead Smart Contracts"></figure>    <div class="s2d06d8e"><p>An Avalanche pool’s spot price can mislead a smart contract when the contract treats the pool’s current token balance as a reliable market value. That price is derived from one venue at one moment, so it can move with a trade, reflect shallow liquidity or diverge from prices elsewhere. A swap uses the pool to set an execution rate; a lending or collateral contract needs a reference that remains useful beyond that trade.</p>
+
+<p>The distinction matters even when the pool is functioning as designed. In an automated market maker, a trade changes the quantities held in the pool, and the pricing formula adjusts the rate as those quantities change. The quoted rate for a small trade may therefore differ from the average rate a larger trade receives. For readers comparing routes on Avalanche, <a href="https://paragraph.com/@citic92495/blackhole-swap-4-questions-before-an-avalanche-trade" rel="noopener">Blackhole swap trade questions</a> cover the checks to make before a trade. Those checks concern an individual swap; a contract that uses pool prices as an oracle faces a broader question about how much authority to give one pool.</p>
+
+<h2>How does an Avalanche pool set its price?</h2>
+
+<p>A pool sets its price from the tokens it holds and the pricing rule its contract follows. In a simple constant-product pool, the product of the two reserves stays approximately constant through a trade, less fees and implementation details. The reserve ratio gives a marginal spot price: the rate for an extremely small trade at the current state. A real trade moves the ratio, so the average execution rate changes with trade size.</p>
+
+<p>This is useful for permissionless trading. A pool can quote and settle swaps onchain without a central order book matching buyers and sellers. Arbitrage traders often push pool prices toward rates on other venues, which helps keep active, liquid markets aligned. But that alignment is an outcome of trading, not a guarantee written into the pool. A thin or newly active market may have few arbitrageurs and little capital available to correct a skew.</p>
+
+<p>Concentrated-liquidity pools add another complication: liquidity can be allocated within selected price ranges. The displayed spot rate does not by itself show how much liquidity is available across the price movement a trade would cause. If a swap crosses into a range with less active liquidity, its execution price can move sharply even though the initial quote looked close to the market.</p>
+
+<h2>When can a pool price give a contract the wrong signal?</h2>
+
+<p>A pool price gives a contract a poor signal when the contract reads a manipulable spot rate and uses it to make a decision worth more than the cost of moving that rate. For example, a lending contract might use a token’s pool price to value collateral. If a large trade temporarily pushes the price up and the contract reads it before arbitrage restores the balance, it may allow more borrowing than the collateral would support at a broader market price.</p>
+
+<p>Flash loans can supply capital for a large trade within a transaction, but the core weakness is the contract’s dependence on a price that can be changed at the moment it is read. The same concern applies to liquidations, vault share values and token issuance rules. A swap contract is different: it must use a pool’s current state to execute a trade, and it can limit that trade with a minimum-output or maximum-slippage condition. That protects the trader’s execution terms; it does not make the pool’s spot rate a sound collateral valuation.</p>
+
+<p>Before relying on a pool-derived price, developers should ask:</p>
+
+<ul>
+<li>How deep is the pool relative to the size of a trade that could change its price?</li>
+<li>Does the contract use a momentary spot rate, or average observations over a defined period?</li>
+<li>Can another independent market or price feed confirm the asset’s value?</li>
+<li>What does the contract do when the source is stale, unavailable or far from other references?</li>
+</ul>
+
+<h2>What should a contract use instead of a pool’s spot price?</h2>
+
+<p>A contract should choose a price source for its actual decision, using a pool spot price mainly when it needs the current rate for a trade. A time-weighted average price, or TWAP, smooths observations over a window, making a brief price move less influential. Longer windows raise the cost of sustaining manipulation, but they also react more slowly to real market moves. A stale average can be wrong during a genuine repricing.</p>
+
+<p>Where a suitable feed exists, an external oracle can draw on multiple sources and publish an aggregated price onchain. Avalanche’s C-Chain documentation lists Chainlink Data Feeds, including an AVAX/USD feed; the right feed still depends on the asset and use case. A contract must check that a feed covers the token it needs, that its answer is recent enough, and that its units and decimals are handled correctly. Many smaller tokens will not have a direct feed, and converting through another asset introduces additional assumptions.</p>
+
+<p>For risk-sensitive uses, combining independent evidence is usually stronger than trusting one pool: a feed can provide a market reference, while a pool can show whether the asset can actually be sold at scale. Bounds on acceptable prices, minimum liquidity requirements and a defined fallback or pause mode can keep one anomalous reading from triggering an irreversible action. Each control adds complexity, and a pause can also block valid activity during volatile markets.</p>
+
+<p>The signals to watch are the gap between a pool’s spot rate and other venues, its available liquidity at the contract’s likely trade size, and the age of any oracle update. For developers, the key test is whether a price move that lasts only for one transaction can change borrowing, liquidation or minting outcomes. For traders, the relevant comparison is the expected output for the full order, not the pool’s headline rate.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/a-token-swap-estimate-is-a-quote-not-a-promise/">A token swap estimate is a quote, not a promise</a></li><li class="sc1f35f8"><a class="s48db07b" href="/reading-a-bnb-chain-wallets-token-history/">Reading a BNB Chain Wallet’s Token History</a></li><li class="sc1f35f8"><a class="s48db07b" href="/sec-proposes-conditional-self-custody-for-crypto-funds/">SEC proposes conditional self-custody for crypto funds</a></li><li class="sc1f35f8"><a class="s48db07b" href="/a-token-pause-can-stall-one-leg-of-a-polygon-bridge-transfer/">A Token Pause Can Stall One Leg of a Polygon Bridge Transfer</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a></nav>
+    <p class="s3c435f0">Independent coverage — not investment advice.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
