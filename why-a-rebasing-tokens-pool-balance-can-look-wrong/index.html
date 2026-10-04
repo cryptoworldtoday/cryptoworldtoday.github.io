@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebasing token pool balances, reserves and price</title>
+<meta name="description" content="A rebasing token can change a pool’s live balance without a trade, while an AMM’s stored reserves lag; compare both before reading price or liquidity.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/why-a-rebasing-tokens-pool-balance-can-look-wrong/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why a rebasing token’s pool balance can look wrong">
+<meta property="og:description" content="A rebasing token can change a pool’s live balance without a trade, while an AMM’s stored reserves lag; compare both before reading price or liquidity.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/why-a-rebasing-tokens-pool-balance-can-look-wrong/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/why-a-rebasing-tokens-pool-balance-can-look-wrong-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why a rebasing token’s pool balance can look wrong"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why a rebasing token’s pool balance can look wrong">
+<meta name="twitter:description" content="A rebasing token can change a pool’s live balance without a trade, while an AMM’s stored reserves lag; compare both before reading price or liquidity.">
+<meta property="article:published_time" content="2026-10-04T15:00:03+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/why-a-rebasing-tokens-pool-balance-can-look-wrong/#webpage",
+      "url": "https://cryptoworldtoday.github.io/why-a-rebasing-tokens-pool-balance-can-look-wrong/",
+      "name": "Rebasing token pool balances, reserves and price",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/why-a-rebasing-tokens-pool-balance-can-look-wrong/#article",
+      "headline": "Why a rebasing token’s pool balance can look wrong",
+      "isAccessibleForFree": true,
+      "description": "A rebasing token can change a pool’s live balance without a trade, while an AMM’s stored reserves lag; compare both before reading price or liquidity.",
+      "datePublished": "2026-10-04T15:00:03+00:00",
+      "dateModified": "2026-10-04T15:00:03+00:00",
+      "url": "https://cryptoworldtoday.github.io/why-a-rebasing-tokens-pool-balance-can-look-wrong/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/why-a-rebasing-tokens-pool-balance-can-look-wrong/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 926,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-a-rebasing-tokens-pool-balance-can-look-wrong-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-a-rebasing-tokens-pool-balance-can-look-wrong-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-a-rebasing-tokens-pool-balance-can-look-wrong-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why a rebasing token’s pool balance can look wrong",
+          "item": "https://cryptoworldtoday.github.io/why-a-rebasing-tokens-pool-balance-can-look-wrong/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>Why a rebasing token’s pool balance can look wrong</h1>
+<p class="s49052b3">A rebasing token can change a pool’s live balance without a trade, while an AMM’s stored reserves lag; compare both before reading price or liquidity.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-10-04T15:00:03+00:00">Oct 4, 2026</time><span>5 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img fetchpriority="high" class="sbc2bd0b" src="/assets/covers/why-a-rebasing-tokens-pool-balance-can-look-wrong.jpg" alt="Why a rebasing token’s pool balance can look wrong"></figure>    <div class="s2d06d8e"><p>A rebasing token’s pool balance can change without anyone trading because the token contract adjusts balances across holders, including the pool. That can make a dashboard’s displayed amount disagree with the pool’s stored reserves, which many automated market makers (AMMs) use to quote trades. The difference is not automatically a lost token or a bad price feed: it may be a timing mismatch between a live balance and an accounting snapshot.</p>
+
+<p>This differs from a fixed-supply token, where a pool’s balance usually changes through transfers, swaps, or liquidity actions. A rebase changes the number of units attributed to addresses directly. For a separate account of how Blackhole Swap handles treasury payouts, see <a href="https://cryptoposts.github.io/how-blackhole-swap-fits-treasury-payouts/" rel="noopener">Blackhole Swap treasury payout mechanics</a>.</p>
+
+<h2>Why does a rebasing token’s balance change without a trade?</h2>
+
+<p>A rebasing token changes the unit count assigned to holders, often by adjusting a shared scaling factor. In a positive rebase, balances rise proportionally; in a negative rebase, they fall. The holder’s percentage of the token supply can remain the same even though the number in the wallet changes. The same mechanism applies to a pool address that holds the token.</p>
+
+<p>That is different from a transfer. No transaction needs to move tokens from one holder to another for a rebase to alter displayed balances. Depending on the token implementation, a block explorer may show the new amount when it reads the token contract, while a pool contract still holds reserve values recorded during its last update.</p>
+
+<p>So “pool balance” can refer to two separate readings: the token contract’s current balance for the pool address, or the AMM’s stored reserve. They can diverge after a rebase. A wallet tracker, block explorer, or analytics page may show one or the other, so the label alone does not explain which value it displays.</p>
+
+<h2>Why can the pool’s reserves disagree with its live token balance?</h2>
+
+<p>Many AMMs keep reserve figures as internal accounting state and update them during pool operations. A rebase can alter the token contract’s live balance without calling the pool, leaving that stored state unchanged until the AMM updates it. The gap is an accounting difference, not necessarily evidence that the pool has been drained.</p>
+
+<p>In a constant-product pool, reserves help determine the exchange rate and the effect of a trade. If a token’s live balance rises while the stored reserve stays put, a pool may have more tokens at its address than its reserve record implies. If the balance falls, the stored reserve can exceed what is actually there. How the AMM handles that difference depends on its design and the transaction being processed.</p>
+
+<p>For example, Uniswap v2 separates token balances from stored reserves and provides a <code>sync</code> operation to align reserves with current balances. That is not a universal fix for every pool or token: another AMM may use different accounting, and a trade or liquidity action may update reserves as part of its normal logic. The important check is whether the interface is showing the pool’s live token balance, its recorded reserve, or an estimate derived from one of them.</p>
+
+<h2>How should you read the displayed price and liquidity?</h2>
+
+<p>Check what the page is measuring before treating a mismatch as a price error. If the displayed token amount comes from the token contract but the quoted price uses stored reserves, the two readings may reflect different moments in the pool’s accounting. A rebase can also change the number of units per holder without changing that holder’s proportional share of the supply, so raw token counts alone do not describe economic ownership.</p>
+
+<p>When investigating a specific pool, compare these readings at the same block if possible:</p>
+
+<ul>
+<li>The token contract’s current balance for the pool address.</li>
+<li>The AMM’s stored reserve for that token, if the pool exposes one.</li>
+<li>The transaction history around the latest rebase and any later pool update.</li>
+<li>The price quote from a small trade, which can reveal how the AMM currently treats the balance and reserve figures.</li>
+</ul>
+
+<p>A quoted price is not the same as a portfolio valuation. The quote describes the rate available for a particular trade size under current pool rules; the displayed reserve ratio is a snapshot and may not capture fees, slippage, or how the AMM responds to the rebase. For larger trades, the executable quote matters more than a simple ratio on a dashboard.</p>
+
+<h2>Is wrapping a rebasing token a better fit for a pool?</h2>
+
+<p>A non-rebasing wrapper can make pool accounting more familiar by keeping the wrapper’s unit balance fixed while its redemption value changes with the underlying token. This separates the balance-changing behavior from the asset used in the pool. The trade-off is another contract and conversion step: users must understand how the wrapper maps to the rebasing asset and whether the relevant market has enough liquidity.</p>
+
+<p>Directly pooling the rebasing token can preserve exposure to its changing unit count, but it requires the AMM, its integrations, and its data tools to handle balance changes correctly. A fixed-supply token generally fits reserve-based accounting more predictably, while a wrapper can offer a compatibility layer at the cost of added complexity.</p>
+
+<p>The practical takeaway is to treat a surprising pool figure as a question about which balance is being reported and when the AMM last updated its reserves. Check the token’s rebase behavior, compare live balances with pool accounting at one block, and use a current trade quote to assess execution. The next signals to watch are the token’s rebase events, reserve updates after those events, and whether the pool’s quote tracks the actual balance available for a trade.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/five-steps-to-fund-a-polygon-wallet-before-minting/">Five Steps to Fund a Polygon Wallet Before Minting</a></li><li class="sc1f35f8"><a class="s48db07b" href="/multi-hop-swaps-how-to-read-the-route-before-you-trade/">Multi-Hop Swaps: How to Read the Route Before You Trade</a></li><li class="sc1f35f8"><a class="s48db07b" href="/blast-will-wind-down-as-operating-costs-outrun-revenue/">Blast will wind down as operating costs outrun revenue</a></li><li class="sc1f35f8"><a class="s48db07b" href="/solana-swap-slippage-set-a-limit-not-a-price-target/">Solana Swap Slippage: Set a Limit, Not a Price Target</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a></nav>
+    <p class="s3c435f0">Independent coverage — not investment advice.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
