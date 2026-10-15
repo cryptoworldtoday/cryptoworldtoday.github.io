@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Crypto Wallet Bridges Wait for Confirmations</title>
+<meta name="description" content="Wallet bridges wait for source-chain confirmations to reduce reorg risk, but thresholds vary by chain, bridge design and the speed or liquidity a route can offer.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/why-wallet-bridges-wait-for-more-confirmations/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why Wallet Bridges Wait for More Confirmations">
+<meta property="og:description" content="Wallet bridges wait for source-chain confirmations to reduce reorg risk, but thresholds vary by chain, bridge design and the speed or liquidity a route can offer.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/why-wallet-bridges-wait-for-more-confirmations/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/why-wallet-bridges-wait-for-more-confirmations-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why Wallet Bridges Wait for More Confirmations"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Wallet Bridges Wait for More Confirmations">
+<meta name="twitter:description" content="Wallet bridges wait for source-chain confirmations to reduce reorg risk, but thresholds vary by chain, bridge design and the speed or liquidity a route can offer.">
+<meta property="article:published_time" content="2026-10-15T21:41:34+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/why-wallet-bridges-wait-for-more-confirmations/#webpage",
+      "url": "https://cryptoworldtoday.github.io/why-wallet-bridges-wait-for-more-confirmations/",
+      "name": "Why Crypto Wallet Bridges Wait for Confirmations",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/why-wallet-bridges-wait-for-more-confirmations/#article",
+      "headline": "Why Wallet Bridges Wait for More Confirmations",
+      "isAccessibleForFree": true,
+      "description": "Wallet bridges wait for source-chain confirmations to reduce reorg risk, but thresholds vary by chain, bridge design and the speed or liquidity a route can offer.",
+      "datePublished": "2026-10-15T21:41:34+00:00",
+      "dateModified": "2026-10-15T21:41:34+00:00",
+      "url": "https://cryptoworldtoday.github.io/why-wallet-bridges-wait-for-more-confirmations/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/why-wallet-bridges-wait-for-more-confirmations/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 857,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-wallet-bridges-wait-for-more-confirmations-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-wallet-bridges-wait-for-more-confirmations-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-wallet-bridges-wait-for-more-confirmations-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why Wallet Bridges Wait for More Confirmations",
+          "item": "https://cryptoworldtoday.github.io/why-wallet-bridges-wait-for-more-confirmations/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoworldtoday.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>Why Wallet Bridges Wait for More Confirmations</h1>
+<p class="s49052b3">Wallet bridges wait for source-chain confirmations to reduce reorg risk, but thresholds vary by chain, bridge design and the speed or liquidity a route can offer.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-10-15T21:41:34+00:00">Oct 15, 2026 · 21:41 UTC</time><span>5 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img width="1200" height="630" fetchpriority="high" class="sbc2bd0b" src="/assets/covers/why-wallet-bridges-wait-for-more-confirmations.jpg" alt="Why Wallet Bridges Wait for More Confirmations"></figure>    <div class="s2d06d8e"><p>Wallet bridges wait for more source-chain confirmations to reduce the chance that a transfer is built on a block the network later replaces. A bridge cannot safely act on a transaction merely because it appears in a wallet: it needs enough evidence that the transaction will remain part of the chain’s accepted history. The wait is a security threshold, and its length depends on the chain and the bridge’s design.</p>
+
+<p>That threshold matters because a bridge usually has to coordinate two separate ledgers. A user may lock or burn an asset on one chain before a bridge or its operators authorize a release or mint on another. If the source transaction disappears in a reorganization after the destination asset has been issued, the bridge could face an asset on one side without the corresponding deposit on the other. A route built around a <a href="https://marcus-defi-le1kbtbsdqjw3xswwsbsv.justblogged.com/mantle-bridge-canonical-routes-explained-integrators" rel="noopener">mantle bridge</a> illustrates why the route’s settlement design matters alongside the wallet’s displayed wait.</p>
+
+<h2>What do confirmations prove to a bridge?</h2>
+
+<p>Confirmations show that blocks have been added on top of the block containing a transaction, making a reversal progressively less likely. They do not all mean the same thing across networks. On a chain where finality is probabilistic, additional blocks increase confidence that the transaction will stay settled; on a chain with a separate finality mechanism, a bridge may wait for that stronger signal instead of relying only on a block count.</p>
+
+<p>There is no universal number of confirmations that makes a transfer safe. A bridge may set different thresholds for different source chains, assets or transaction sizes, based on how the chain reaches consensus and what risks the bridge is prepared to accept. A wallet may show a single “confirming” state even when the underlying route is waiting for several checks: inclusion in a block, more blocks, a finality signal, or approval from the bridge’s validators or relayers.</p>
+
+<p>Those checks address distinct risks. More source-chain confirmations help guard against a reorganization; a validator quorum helps guard against a bridge operator or signer failing to attest to the deposit. Neither guarantees that every part of the route is risk-free. The bridge still depends on its contracts, keys, software and, in some designs, the parties responsible for observing and relaying transactions.</p>
+
+<h2>Why can one route be faster than another?</h2>
+
+<p>A route is faster when it can act on weaker or different evidence, or when it uses liquidity to avoid making the user wait for settlement. A bridge that waits for source-chain finality before releasing funds prioritizes stronger settlement assurance, but the user bears the full delay. A route that accepts a lower confirmation threshold can move sooner, while taking on more exposure if the source transaction is later reversed.</p>
+
+<p>Liquidity-based routes change who waits. A provider can send the destination asset from its own inventory before the original transfer has completed its slower settlement path. The user gets a quicker result, and the provider later reconciles the transfer. That convenience can come with a fee, route limits, inventory constraints or reliance on the provider to honor the advance. It does not make the source chain finalize faster; it changes how the bridge handles the gap.</p>
+
+<p>Rollup withdrawals add another distinction. A canonical route may need to wait for the rollup’s settlement process on its base layer, which can take longer than ordinary block confirmation. A faster third-party route may pay out earlier using liquidity, then recover funds through the slower canonical process. That is a difference in settlement path and risk allocation, not simply a wallet choosing to wait for extra blocks.</p>
+
+<p>For most users, the better choice depends on whether speed is worth the route’s fee and assumptions. Compare the expected wait, total cost, limits and settlement method shown for the specific transfer. A short confirmation wait on one chain is not directly comparable to a longer withdrawal period on another, because the mechanisms being awaited may differ.</p>
+
+<h2>What should you check while a transfer is pending?</h2>
+
+<p>A pending transfer usually means the bridge has not yet met one or more conditions for acting on the source transaction. Check the source transaction status and the route’s stated progress before deciding what to do. If the transaction is included but still gaining confirmations, waiting is generally safer than submitting another transfer, which could create a second deposit rather than speed up the first.</p>
+
+<p>Use the route details to understand what the wait represents. Look for whether the bridge is awaiting more source blocks, chain finality, an operator attestation or destination-chain processing. Keep the source transaction identifier so you can compare the wallet’s status with the source chain’s record. If the source transaction fails or is replaced, the bridge cannot complete the transfer on the original terms; if it succeeds, a delay may still remain before the destination action is processed.</p>
+
+<p>The signals worth watching are the source chain’s confirmation or finality status, the bridge’s own attestation state and the destination transaction once it is submitted. Together, they explain whether a transfer is waiting for the source ledger to settle, for the bridge to authorize movement, or for the destination chain to process the result.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/a-confirmed-cross-chain-swap-has-only-cleared-its-first-test/">A Confirmed Cross-Chain Swap Has Only Cleared Its First Test</a></li><li class="sc1f35f8"><a class="s48db07b" href="/solana-schedules-alpenglow-for-oct-21-targeting-150ms-finality/">Solana schedules Alpenglow for Oct. 21, targeting 150ms finality</a></li><li class="sc1f35f8"><a class="s48db07b" href="/drivewealth-adds-rlusd-settlement-in-europe-eyes-us-expansion/">DriveWealth adds RLUSD settlement in Europe, eyes US expansion</a></li><li class="sc1f35f8"><a class="s48db07b" href="/cross-chain-swap-timing-depends-on-more-than-bridge-speed/">Cross-Chain Swap Timing Depends on More Than Bridge Speed</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a><a href="/editorial-policy/">Editorial policy</a></nav>
+    <p class="s3c435f0">Independent crypto coverage, for information only.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
