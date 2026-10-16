@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mantle Bridge Routes: Diagnose Direct and Multi-Hop Transfers</title>
+<meta name="description" content="Trace a Mantle route by separating its source transaction, bridge message and destination action; each stage points to a different cause when funds stall.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/how-to-diagnose-direct-and-multi-hop-mantle-routes/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to Diagnose Direct and Multi-Hop Mantle Routes">
+<meta property="og:description" content="Trace a Mantle route by separating its source transaction, bridge message and destination action; each stage points to a different cause when funds stall.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/how-to-diagnose-direct-and-multi-hop-mantle-routes/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/how-to-diagnose-direct-and-multi-hop-mantle-routes-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Diagnose Direct and Multi-Hop Mantle Routes"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Diagnose Direct and Multi-Hop Mantle Routes">
+<meta name="twitter:description" content="Trace a Mantle route by separating its source transaction, bridge message and destination action; each stage points to a different cause when funds stall.">
+<meta property="article:published_time" content="2026-10-16T11:17:50+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/how-to-diagnose-direct-and-multi-hop-mantle-routes/#webpage",
+      "url": "https://cryptoworldtoday.github.io/how-to-diagnose-direct-and-multi-hop-mantle-routes/",
+      "name": "Mantle Bridge Routes: Diagnose Direct and Multi-Hop Transfers",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/how-to-diagnose-direct-and-multi-hop-mantle-routes/#article",
+      "headline": "How to Diagnose Direct and Multi-Hop Mantle Routes",
+      "isAccessibleForFree": true,
+      "description": "Trace a Mantle route by separating its source transaction, bridge message and destination action; each stage points to a different cause when funds stall.",
+      "datePublished": "2026-10-16T11:17:50+00:00",
+      "dateModified": "2026-10-16T11:17:50+00:00",
+      "url": "https://cryptoworldtoday.github.io/how-to-diagnose-direct-and-multi-hop-mantle-routes/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/how-to-diagnose-direct-and-multi-hop-mantle-routes/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 914,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-diagnose-direct-and-multi-hop-mantle-routes-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-diagnose-direct-and-multi-hop-mantle-routes-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-diagnose-direct-and-multi-hop-mantle-routes-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to Diagnose Direct and Multi-Hop Mantle Routes",
+          "item": "https://cryptoworldtoday.github.io/how-to-diagnose-direct-and-multi-hop-mantle-routes/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoworldtoday.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>How to Diagnose Direct and Multi-Hop Mantle Routes</h1>
+<p class="s49052b3">Trace a Mantle route by separating its source transaction, bridge message and destination action; each stage points to a different cause when funds stall.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-10-16T11:17:50+00:00">Oct 16, 2026 · 11:17 UTC</time><span>5 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img width="1200" height="630" fetchpriority="high" class="sbc2bd0b" src="/assets/covers/how-to-diagnose-direct-and-multi-hop-mantle-routes.jpg" alt="How to Diagnose Direct and Multi-Hop Mantle Routes"></figure>    <div class="s2d06d8e"><p>A Mantle route is diagnosed by tracing each transaction from the source chain to the final destination, rather than treating a submitted transfer as one completed action. A direct route has fewer stages to check; a multi-hop route can add swaps, intermediate chains and separate delivery steps. For the wider question of when to bridge before or after a swap, see this <a href="https://telegra.ph/Mantle-Bridge-Swap-Before-or-After-to-Save-Fees-10-14" rel="noopener">mantle bridge</a> guide. In either case, start with the source transaction hash and identify what the route promised to deliver.</p>
+
+<h2>What makes a Mantle route direct or multi-hop?</h2>
+
+<p>A direct route moves an asset from its source chain to Mantle in one bridge path, while a multi-hop route relies on additional steps to reach the requested asset or network. “Direct” describes the path, not necessarily a single wallet signature: an ERC-20 transfer may require an approval before the deposit, and a destination swap may add another transaction.</p>
+
+<p>A multi-hop route can pass through an intermediary chain, exchange one token for another, or combine both. The route provider coordinates those stages, but the on-chain activity still appears as distinct transactions or messages. That distinction matters when troubleshooting: a completed source-chain transaction proves that the first instruction was accepted; it does not by itself prove that the destination asset arrived.</p>
+
+<p>Before sending, record the route’s source network, source token, destination network, destination token, recipient address and estimated output. Compare those details with the wallet confirmation. A route that ends in a different token from the one sent may be working as quoted, while a route to the wrong recipient or network is a different problem.</p>
+
+<h2>How do you trace a direct transfer to Mantle?</h2>
+
+<p>For a direct transfer, check the source transaction first, then verify whether the corresponding asset arrived at the intended address on Mantle. A failed or reverted source transaction did not complete the deposit; a successful source transaction means the source-chain action was included, but the destination step may still be processing.</p>
+
+<p>Use the transaction hash in the source-chain explorer to confirm the sender, recipient or bridge contract, token and amount. Then check the destination address on Mantle’s explorer. If the balance is present there but not visible in the wallet, confirm the selected network and token contract: a wallet display can omit a token even when the address holds it. If the destination balance is absent, look for a route or bridge status tied to the source transaction, and distinguish a pending message from a failed transaction.</p>
+
+<p>Approval is another common point of confusion. An approval gives a contract permission to spend a token; it does not send the token across chains. If the wallet shows a successful approval but no deposit transaction, the transfer has not yet been submitted. If the deposit transaction is confirmed, preserve its hash and use the route’s status or relevant explorer records to follow the destination step.</p>
+
+<h2>What should you check when a multi-hop route stalls?</h2>
+
+<p>For a multi-hop route, identify the last completed leg and the next expected action; the source transaction alone cannot locate a delay deeper in the route. Start with the route provider’s transaction history, if available, and match each listed transaction to the appropriate chain explorer. Check the token and recipient at every handoff rather than assuming that the original asset remains unchanged.</p>
+
+<ul>
+<li><strong>Source leg:</strong> Was the transaction included, and did it send the quoted token and amount to the route’s contract or address?</li>
+<li><strong>Intermediate leg:</strong> Does the route show a swap or transfer on another chain? Check whether that transaction completed and what asset it produced.</li>
+<li><strong>Destination leg:</strong> Is there a Mantle transaction or pending delivery? Verify its recipient and token contract against the route details.</li>
+<li><strong>Final balance:</strong> Check the destination address on the explorer, then check the wallet’s selected network and token list.</li>
+</ul>
+
+<p>These checks separate a source-chain failure from a delayed message, an intermediate swap issue or a completed transfer that the wallet does not display. If the route shows a confirmed first leg but no later leg, keep the transaction hashes and route identifier, and use the provider’s recovery or support process. Do not submit the same route again simply because the destination balance has not appeared; a pending leg may still deliver, creating a duplicate transfer.</p>
+
+<h2>When is a direct route the better choice?</h2>
+
+<p>A direct route is usually easier to diagnose and has fewer points where timing, liquidity or execution can diverge. It is preferable when it supports the asset and destination you need and its quoted amount, fees and expected delivery meet your requirements. A multi-hop route can be useful when no direct path supports the asset pair, or when an intermediary swap produces a better net result.</p>
+
+<p>Compare the amount expected at the destination, not just the displayed bridge fee. A multi-hop path may include swap fees, price impact, network gas on more than one chain and service charges. A direct route can still cost more if its conversion rate is worse or it requires a separate swap after arrival. The practical comparison is the final token amount after costs, alongside the number of steps and the route’s stated timing.</p>
+
+<p>For any route, keep the source hash and note the exact destination address and token. The useful signals after submission are the status of each leg, whether the destination transaction has appeared, and whether the received token matches the quote. Those checks reveal whether to wait, correct a wallet display, or contact the route provider with evidence of the stalled stage.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/two-explorers-show-what-a-bridge-quote-leaves-out/">Two explorers show what a bridge quote leaves out</a></li><li class="sc1f35f8"><a class="s48db07b" href="/why-wallet-bridge-transfers-take-longer-than-a-swap/">Why Wallet Bridge Transfers Take Longer Than a Swap</a></li><li class="sc1f35f8"><a class="s48db07b" href="/a-confirmation-is-not-the-same-as-cross-chain-finality/">A confirmation is not the same as cross-chain finality</a></li><li class="sc1f35f8"><a class="s48db07b" href="/moving-usdc-between-chains-choose-the-route-not-just-the-fee/">Moving USDC Between Chains: Choose the Route, Not Just the Fee</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a><a href="/editorial-policy/">Editorial policy</a></nav>
+    <p class="s3c435f0">Independent crypto coverage, for information only.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
