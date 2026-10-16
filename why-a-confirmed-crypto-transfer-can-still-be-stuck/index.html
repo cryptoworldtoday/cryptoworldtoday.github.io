@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crypto transfer stuck after source confirmation</title>
+<meta name="description" content="A source-chain confirmation does not guarantee arrival: bridge relayers, proofs, liquidity and destination execution each add separate steps and failure modes.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/why-a-confirmed-crypto-transfer-can-still-be-stuck/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why a confirmed crypto transfer can still be stuck">
+<meta property="og:description" content="A source-chain confirmation does not guarantee arrival: bridge relayers, proofs, liquidity and destination execution each add separate steps and failure modes.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/why-a-confirmed-crypto-transfer-can-still-be-stuck/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/why-a-confirmed-crypto-transfer-can-still-be-stuck-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why a confirmed crypto transfer can still be stuck"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why a confirmed crypto transfer can still be stuck">
+<meta name="twitter:description" content="A source-chain confirmation does not guarantee arrival: bridge relayers, proofs, liquidity and destination execution each add separate steps and failure modes.">
+<meta property="article:published_time" content="2026-10-16T01:51:19+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/why-a-confirmed-crypto-transfer-can-still-be-stuck/#webpage",
+      "url": "https://cryptoworldtoday.github.io/why-a-confirmed-crypto-transfer-can-still-be-stuck/",
+      "name": "Crypto transfer stuck after source confirmation",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/why-a-confirmed-crypto-transfer-can-still-be-stuck/#article",
+      "headline": "Why a confirmed crypto transfer can still be stuck",
+      "isAccessibleForFree": true,
+      "description": "A source-chain confirmation does not guarantee arrival: bridge relayers, proofs, liquidity and destination execution each add separate steps and failure modes.",
+      "datePublished": "2026-10-16T01:51:19+00:00",
+      "dateModified": "2026-10-16T01:51:19+00:00",
+      "url": "https://cryptoworldtoday.github.io/why-a-confirmed-crypto-transfer-can-still-be-stuck/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/why-a-confirmed-crypto-transfer-can-still-be-stuck/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 847,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-a-confirmed-crypto-transfer-can-still-be-stuck-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-a-confirmed-crypto-transfer-can-still-be-stuck-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/why-a-confirmed-crypto-transfer-can-still-be-stuck-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why a confirmed crypto transfer can still be stuck",
+          "item": "https://cryptoworldtoday.github.io/why-a-confirmed-crypto-transfer-can-still-be-stuck/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoworldtoday.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>Why a confirmed crypto transfer can still be stuck</h1>
+<p class="s49052b3">A source-chain confirmation does not guarantee arrival: bridge relayers, proofs, liquidity and destination execution each add separate steps and failure modes.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-10-16T01:51:19+00:00">Oct 16, 2026 · 01:51 UTC</time><span>5 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img width="1200" height="630" fetchpriority="high" class="sbc2bd0b" src="/assets/covers/why-a-confirmed-crypto-transfer-can-still-be-stuck.jpg" alt="Why a confirmed crypto transfer can still be stuck"></figure>    <div class="s2d06d8e"><p>A confirmed transaction on the source chain means that chain has recorded the transfer; it does not mean the receiving chain has credited the funds. A cross-chain transfer can still be waiting for a bridge to observe the transaction, verify it, arrange destination liquidity or execute a second transaction. That gap is why a transfer can look complete in one explorer and remain pending in the bridge interface or destination wallet.</p>
+
+<h2>What does source confirmation mean in a cross-chain transfer?</h2>
+
+<p>It means the source network has accepted the transaction to the point shown by its confirmation rule, while the bridge’s work may still be unfinished. A wallet or explorer can show the source transaction as confirmed before the bridge has acted on it. Some chains treat a block as increasingly unlikely to be reversed as more blocks are added; others use a finality mechanism that establishes when a transaction is finalized. The bridge may wait for its own required threshold before proceeding.</p>
+
+<p>After that threshold, a bridge typically needs to detect the source event and authorize or perform an action on the destination chain. Depending on its design, that can involve relayers, validators, a proof submitted on-chain, or a liquidity provider fulfilling a transfer. These are separate steps with separate transaction records. A source transaction hash proves what happened on the source chain, but it does not by itself prove that destination execution has succeeded.</p>
+
+<p>The route also affects what “pending” means: a lock-and-mint bridge, a burn-and-mint bridge and a liquidity-based route do not resolve delays in the same way. For a closer look at how route design changes the trade-offs, see this fuller guide to choosing a <a href="https://fabian-eth-r7au8lpnpcqpllj1uwxi1.justblogged.com/how-choose-complete-super-bridge-route" rel="noopener">super bridge route</a>. In every case, the useful question is which step has completed and which system is responsible for the next one.</p>
+
+<h2>Why can the destination transfer take longer?</h2>
+
+<p>The destination transfer can take longer because it depends on bridge processing and a successful transaction on a different network. A relay may be delayed, a proof may need to be submitted or verified, or a destination transaction may fail because of congestion, fees or a contract condition. A liquidity-based route can also depend on available funds from a provider. A displayed estimate is therefore a forecast for a sequence of steps, not a guarantee that the source confirmation and arrival happen together.</p>
+
+<p>This differs from a same-chain transfer, where the receiving address is credited through the same network’s transaction process. It also differs from a centralized exchange withdrawal: an exchange may update its internal balance before it sends an on-chain withdrawal, while a bridge transfer relies on coordination between distinct networks and bridge components. Faster routes can reduce waiting by using available destination liquidity or a different verification process, but that changes the route’s dependencies and may change its fees or trust assumptions.</p>
+
+<p>When diagnosing a delay, check the status against the transfer’s exact route and transaction hash. Look for whether the source event was detected, whether verification or relay is pending, and whether a destination transaction hash exists. A destination hash usually means the bridge has attempted execution; its status on the destination explorer can show whether it succeeded or failed. If no destination transaction exists, the transfer may still be waiting upstream.</p>
+
+<h2>What should you do when a bridge transfer is pending?</h2>
+
+<p>First, identify the last confirmed step before taking action. Use the bridge’s official status page or transfer tracker and compare it with the source and destination explorers. Match the token, network, amount and recipient address, and check that the destination wallet is set to the intended network. A token may arrive under a different contract address or representation than the source asset, so an empty-looking balance does not always mean the transfer failed.</p>
+
+<ul>
+<li>If the source transaction failed or was never included, the bridge cannot process that transfer; inspect the source transaction status.</li>
+<li>If the source succeeded but the bridge has not detected it, check the route’s stated confirmation requirements and official status information.</li>
+<li>If the bridge shows a destination transaction, inspect that hash on the destination network for success or failure.</li>
+<li>If the tracker remains unclear, contact the bridge through its official support channel with the transaction hash and route details; never share a recovery phrase or private key.</li>
+</ul>
+
+<p>A failed destination transaction does not have one universal remedy. Some bridge designs provide a retry or refund path; others require support or a specific recovery process. Do not submit a second transfer simply because the first is delayed: it can create a separate transfer and fee without resolving the original. Follow instructions tied to the exact route, and verify any proposed recovery action through the bridge’s official interface.</p>
+
+<p>The practical takeaway is to treat “source confirmed” as a milestone, not an arrival notice. The next useful signals are whether the bridge detected the source event, whether verification or liquidity is holding up progress, and whether destination execution has a transaction hash. Those details show whether waiting, checking the destination explorer or using the route’s documented recovery process is the appropriate next step.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/cross-chain-payouts-need-a-destination-minimum/">Cross-chain payouts need a destination minimum</a></li><li class="sc1f35f8"><a class="s48db07b" href="/why-wallet-bridges-wait-for-more-confirmations/">Why Wallet Bridges Wait for More Confirmations</a></li><li class="sc1f35f8"><a class="s48db07b" href="/a-confirmed-cross-chain-swap-has-only-cleared-its-first-test/">A Confirmed Cross-Chain Swap Has Only Cleared Its First Test</a></li><li class="sc1f35f8"><a class="s48db07b" href="/solana-schedules-alpenglow-for-oct-21-targeting-150ms-finality/">Solana schedules Alpenglow for Oct. 21, targeting 150ms finality</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a><a href="/editorial-policy/">Editorial policy</a></nav>
+    <p class="s3c435f0">Independent crypto coverage, for information only.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
