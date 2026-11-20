@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How MEV-Boost delivers a block to Ethereum | The Coin Wire</title>
+<meta name="description" content="How MEV-Boost delivers a block to an Ethereum validator: the proposer signs a blinded bid, then MEV-Boost fetches its payload for publication.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/how-mev-boost-delivers-a-signed-block-to-ethereum/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How MEV-Boost delivers a signed block to Ethereum">
+<meta property="og:description" content="How MEV-Boost delivers a block to an Ethereum validator: the proposer signs a blinded bid, then MEV-Boost fetches its payload for publication.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/how-mev-boost-delivers-a-signed-block-to-ethereum/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/how-mev-boost-delivers-a-signed-block-to-ethereum-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How MEV-Boost delivers a signed block to Ethereum"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How MEV-Boost delivers a signed block to Ethereum">
+<meta name="twitter:description" content="How MEV-Boost delivers a block to an Ethereum validator: the proposer signs a blinded bid, then MEV-Boost fetches its payload for publication.">
+<meta property="article:published_time" content="2026-11-20T03:32:30+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/how-mev-boost-delivers-a-signed-block-to-ethereum/#webpage",
+      "url": "https://cryptoworldtoday.github.io/how-mev-boost-delivers-a-signed-block-to-ethereum/",
+      "name": "How MEV-Boost delivers a block to Ethereum | The Coin Wire",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/how-mev-boost-delivers-a-signed-block-to-ethereum/#article",
+      "headline": "How MEV-Boost delivers a signed block to Ethereum",
+      "isAccessibleForFree": true,
+      "description": "How MEV-Boost delivers a block to an Ethereum validator: the proposer signs a blinded bid, then MEV-Boost fetches its payload for publication.",
+      "datePublished": "2026-11-20T03:32:30+00:00",
+      "dateModified": "2026-11-20T03:32:30+00:00",
+      "url": "https://cryptoworldtoday.github.io/how-mev-boost-delivers-a-signed-block-to-ethereum/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/how-mev-boost-delivers-a-signed-block-to-ethereum/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 734,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-mev-boost-delivers-a-signed-block-to-ethereum-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-mev-boost-delivers-a-signed-block-to-ethereum-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-mev-boost-delivers-a-signed-block-to-ethereum-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How MEV-Boost delivers a signed block to Ethereum",
+          "item": "https://cryptoworldtoday.github.io/how-mev-boost-delivers-a-signed-block-to-ethereum/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoworldtoday.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>How MEV-Boost delivers a signed block to Ethereum</h1>
+<p class="s49052b3">How MEV-Boost delivers a block to an Ethereum validator: the proposer signs a blinded bid, then MEV-Boost fetches its payload for publication.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-11-20T03:32:30+00:00">Nov 20, 2026 · 03:32 UTC</time><span>4 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img width="1200" height="630" fetchpriority="high" class="sbc2bd0b" src="/assets/covers/how-mev-boost-delivers-a-signed-block-to-ethereum.jpg" alt="How MEV-Boost delivers a signed block to Ethereum"></figure>    <div class="s2d06d8e"><p>MEV-Boost delivers a builder’s block to an Ethereum validator by gathering relay bids during the proposer duty, then retrieving the chosen payload after the proposer signs its blinded block; without a usable bid, the validator can propose locally.</p>
+<p>Take a validator whose consensus client signals that it has the proposer duty for a slot. MEV-Boost requests bids from the relays configured for that validator, giving the proposer a choice of blocks assembled by builders. The available bids depend on which relays MEV-Boost contacts. Flashbots relay coverage is one factor in that view; <a href="https://cryptoworldtoday.github.io/flashbots-relay-choice-is-a-trust-and-coverage-trade-off/">Flashbots relay bids and coverage</a> explains how relay selection affects what validators can receive.</p>
+<h2>How does MEV-Boost deliver the selected block?</h2>
+<p>MEV-Boost presents bids from configured relays so the proposer can choose a block for its slot. A builder assembles transactions into a candidate block and submits it, with a bid, through a relay. The relay checks and forwards the bid and its blinded header to MEV-Boost.</p>
+<p>The header gives the proposer information about the offered block and its bid value without exposing the full execution payload. The payload contains the block’s execution contents, including the transactions the builder arranged. The relay returns the header and value so the proposer can consider the offer before those contents are revealed.</p>
+<p>Suppose two builders offer blocks for the same slot. One offers a higher bid than the other, and the proposer chooses it based on that value. MEV-Boost does not make that choice for the proposer: it presents the available bids. The deciding factor in this example is the bid value; the builders still constructed the candidate blocks, and the proposer still selected the bid.</p>
+<p>After choosing, the proposer signs a blinded beacon block that commits to the selected header. That signature is the commitment to the choice. MEV-Boost then asks the relay for the execution payload matching that header. The relay returns the payload, and MEV-Boost passes it to the consensus client, which combines it with the signed block and publishes the complete block to the Beacon Chain.</p>
+<p>The sequence separates the decision from revealing the full transaction contents: the proposer signs the blinded block first, and MEV-Boost retrieves the matching payload afterward. The result is a signed, complete beacon block for the slot. A relay is part of the route that checks and forwards bids and payloads; the builder constructs the block, while the proposer selects and signs the offer.</p>
+<h2>What changes when a builder supplies the block?</h2>
+<p>With MEV-Boost, the proposer can consider blocks built externally without handling their full transaction contents before selecting a bid. In a locally built block, the proposer’s own block-building route supplies the candidate. With a builder bid, an external builder assembles the candidate and submits it through a relay. Both routes lead to a block proposed for the slot, but they place block construction in different hands.</p>
+<p>That separation comes with a dependency: the selected relay must return the payload that matches the signed header. MEV-Boost connects the validator’s consensus client to relays for bids and payloads, but it does not reorder transactions itself. The builder determines the proposed transaction arrangement; the relay checks and forwards what the builder submitted. Flashbots is one organization associated with this relay infrastructure, and its role in the path is the relay connection rather than the proposer’s block selection.</p>
+<p>If no usable bid arrives, the validator can use a locally built block instead. The fallback changes the source of the candidate block, not the publication goal: the consensus client still publishes a complete signed block for the slot. The relevant signals during a proposer duty are whether configured relays return usable bids and whether the chosen relay supplies the matching payload after the blinded block is signed.</p>
+<h2>Related</h2>
+<h3>What is a blinded block in MEV-Boost?</h3>
+<p>A blinded block is the proposer’s signed block commitment with the execution payload withheld until after signing. Its header identifies the selected offer, allowing MEV-Boost to request the corresponding payload from the relay.</p>
+<h3>What happens if MEV-Boost has no bid?</h3>
+<p>If MEV-Boost has no usable bid for the proposer duty, the validator can fall back to a locally built block. That gives the consensus client a block to complete and publish for the slot.</p>
+<p>For a particular proposer duty, check which relays MEV-Boost is configured to contact and whether they return usable bids. That tells you what choices the proposer can consider before signing.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/world-bank-explores-usdc-payments-with-citi-and-circle/">World Bank explores USDC payments with Citi and Circle</a></li><li class="sc1f35f8"><a class="s48db07b" href="/how-to-get-a-cbridge-refund-and-restore-your-balance/">How to get a cBridge refund and restore your balance</a></li><li class="sc1f35f8"><a class="s48db07b" href="/us-courts-authorise-action-on-1-2bn-in-binance-theft/">US courts authorise action on $1.2bn in Binance theft</a></li><li class="sc1f35f8"><a class="s48db07b" href="/chain-id-and-rpc-url-what-each-berachain-field-does/">Chain ID and RPC URL: What Each Berachain Field Does</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a><a href="/editorial-policy/">Editorial policy</a></nav>
+    <p class="s3c435f0">Independent crypto coverage, for information only.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
