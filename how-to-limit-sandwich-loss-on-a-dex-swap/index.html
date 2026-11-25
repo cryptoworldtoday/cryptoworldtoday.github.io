@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How a Sandwich Attack Works on a DEX Swap: Limit Loss</title>
+<meta name="description" content="How does a sandwich attack work on a DEX swap? A bot trades before and after your order to profit from a worse fill. Tight slippage and private routing reduce exposure.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/how-to-limit-sandwich-loss-on-a-dex-swap/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to Limit Sandwich Loss on a DEX Swap">
+<meta property="og:description" content="How does a sandwich attack work on a DEX swap? A bot trades before and after your order to profit from a worse fill. Tight slippage and private routing reduce exposure.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/how-to-limit-sandwich-loss-on-a-dex-swap/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/how-to-limit-sandwich-loss-on-a-dex-swap-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Limit Sandwich Loss on a DEX Swap"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Limit Sandwich Loss on a DEX Swap">
+<meta name="twitter:description" content="How does a sandwich attack work on a DEX swap? A bot trades before and after your order to profit from a worse fill. Tight slippage and private routing reduce exposure.">
+<meta property="article:published_time" content="2026-11-25T08:36:19+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/how-to-limit-sandwich-loss-on-a-dex-swap/#webpage",
+      "url": "https://cryptoworldtoday.github.io/how-to-limit-sandwich-loss-on-a-dex-swap/",
+      "name": "How a Sandwich Attack Works on a DEX Swap: Limit Loss",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/how-to-limit-sandwich-loss-on-a-dex-swap/#article",
+      "headline": "How to Limit Sandwich Loss on a DEX Swap",
+      "isAccessibleForFree": true,
+      "description": "How does a sandwich attack work on a DEX swap? A bot trades before and after your order to profit from a worse fill. Tight slippage and private routing reduce exposure.",
+      "datePublished": "2026-11-25T08:36:19+00:00",
+      "dateModified": "2026-11-25T08:36:19+00:00",
+      "url": "https://cryptoworldtoday.github.io/how-to-limit-sandwich-loss-on-a-dex-swap/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/how-to-limit-sandwich-loss-on-a-dex-swap/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 996,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-limit-sandwich-loss-on-a-dex-swap-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-limit-sandwich-loss-on-a-dex-swap-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-limit-sandwich-loss-on-a-dex-swap-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to Limit Sandwich Loss on a DEX Swap",
+          "item": "https://cryptoworldtoday.github.io/how-to-limit-sandwich-loss-on-a-dex-swap/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoworldtoday.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>How to Limit Sandwich Loss on a DEX Swap</h1>
+<p class="s49052b3">How does a sandwich attack work on a DEX swap? A bot trades before and after your order to profit from a worse fill. Tight slippage and private routing reduce exposure.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-11-25T08:36:19+00:00">Nov 25, 2026 · 08:36 UTC</time><span>5 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img width="1200" height="630" fetchpriority="high" class="sbc2bd0b" src="/assets/covers/how-to-limit-sandwich-loss-on-a-dex-swap.jpg" alt="How to Limit Sandwich Loss on a DEX Swap"></figure>    <div class="s2d06d8e"><p>After you submit a DEX swap, a bot can spot the pending transaction, buy the token first, let your swap execute at a worse price, then sell for a profit. This sandwich attack turns your slippage tolerance and the pool’s liquidity into room for extraction.</p>
+<h2>A visible pending swap gives bots a chance to trade around it</h2>
+<p>Your transaction may wait in Ethereum’s public mempool before a block includes it. Searchers scan those pending transactions for swaps where a trade ahead of yours could move the pool price and leave room to sell afterward. Block builders order transactions by fees or include bundles, so a searcher can pay for a favorable position around your swap.</p>
+<p>The sequence is simple: the bot buys the token you want, your swap executes at a worse rate, and the bot sells into the price increase. The bot’s profit comes from part of the value lost in your worse fill, after accounting for its own trade costs. A sandwich is worthwhile only when the expected price movement and available liquidity leave enough value to cover those costs.</p>
+<p>Slippage tolerance sets the worst output you are willing to accept relative to the quote. That makes it a budget a bot may try to use: the bot can push the execution price toward your minimum output, but the tolerance is not guaranteed profit. Pool liquidity, trade size, fees, and competing transactions all affect whether the attack can work and how much it can extract.</p>
+<p>Large swaps in thin pools move the price more than small swaps in deep pools. That price impact can give a searcher more room to trade around you. A loose tolerance on a large order therefore creates more potential exposure than a tight tolerance on a small one.</p>
+<h2>A 2% limit can leave room for a worse ETH-to-SHIB fill</h2>
+<p>Say you are swapping ETH for SHIB and set 2% slippage. Your wallet quotes an expected amount of SHIB, then submits the trade with a minimum output roughly 2% below that quote. The bot sees the pending order and judges whether it can move the pool price while keeping your trade executable.</p>
+<ol>
+<li>The bot buys SHIB before your swap. That purchase raises SHIB’s price in the pool, leaving the pool with a less favorable ETH-to-SHIB rate.</li>
+<li>Your swap executes at the changed rate. You receive fewer SHIB than the original quote; if market conditions allow, the output can land near your 2% minimum.</li>
+<li>The bot sells the SHIB it bought into the higher pool price. The sequence leaves you with less SHIB than the initial quote and the bot with any remaining value after costs.</li>
+</ol>
+<p>Your 2% setting is a maximum tolerated difference from the quote, not a prediction that the bot will take exactly 2%. A smaller tolerance narrows the range in which a worsened fill can still execute, but setting it too tight can cause an ordinary price move to make the swap fail. The useful setting is the tightest one that still lets your trade fill under normal conditions.</p>
+<p>For a large order, splitting the swap into smaller trades can reduce the price movement caused by each individual fill. It may also mean more transactions and fees, and it does not guarantee that no bot will target the trades. Compare the added cost with the price impact and exposure of sending the full amount through a thin pool at once.</p>
+<h2>Tight limits and private routing reduce exposure</h2>
+<p>Set slippage to match the pool and the trade, rather than leaving a broad default in place. A volatile pool may need more room for ordinary movement, while a deep pool and a modest trade may work with less. Watch the quoted output and minimum output before confirming; a wide gap means you are accepting more price movement before the swap reverts.</p>
+<p>You can also send a swap through a private RPC, such as Flashbots Protect, which sends transactions privately to builders instead of exposing them in the public mempool. This can reduce the opportunity for searchers who rely on seeing pending transactions. Private routing changes who can see the transaction before inclusion; execution still depends on the route and the builder.</p>
+<p>On ShibaSwap, as on other automated market makers, pool depth and your trade size shape the price impact a searcher may exploit. <a href="https://telegra.ph/How-to-Reduce-Risk-When-Using-ShibaSwap-A-Four-Step-Routine-11-23" rel="noopener">shiba swap</a> swaps are therefore worth checking for quoted output, slippage, and routing before you confirm.</p>
+<h2>Related questions</h2>
+<h3>What slippage should I set on a DEX?</h3>
+<p>Use the lowest tolerance that still allows the trade to fill under normal price movement. The right setting varies with pool liquidity, volatility, and trade size. A lower limit reduces how far execution can move from the quote, while an overly tight limit can make the transaction revert.</p>
+<h3>Is MEV the same as front-running?</h3>
+<p>MEV is value extracted by choosing or changing transaction ordering. Front-running is one tactic: placing a transaction before another. A sandwich combines a front-run buy with a back-run sale around the target swap.</p>
+<h2>What else should a swapper check?</h2>
+<h3>How can I tell if my swap was sandwiched?</h3>
+<p>Compare the transaction’s execution price with its quote and inspect the transactions immediately before and after it in a block explorer. A searcher buy before your swap and a matching sale after it are clues; also account for ordinary price movement and pool impact.</p>
+<h3>Does Shibarium have the same sandwich risk?</h3>
+<p>Any network with public pending swaps, automated market maker pools, and transaction ordering can have similar risks. The details depend on that network’s mempool visibility and block-building process, so check how transactions are submitted and ordered there.</p>
+<h3>Do aggregators protect against MEV?</h3>
+<p>An aggregator can compare routes and split a trade across pools, which may improve the quoted execution. Protection from sandwiching depends on its transaction submission and routing; an aggregator using public submission can still expose a pending swap. Check whether the service offers private routing and compare its final output with a direct pool swap.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/how-many-slices-should-a-twap-order-use-for-a-large-trade/">How many slices should a TWAP order use for a large trade?</a></li><li class="sc1f35f8"><a class="s48db07b" href="/steth-vs-reth-vs-cbeth-which-fits-restaking/">stETH vs rETH vs cbETH: which fits restaking?</a></li><li class="sc1f35f8"><a class="s48db07b" href="/blackrock-opens-hong-kong-tokenized-fund-with-100-million/">BlackRock opens Hong Kong tokenized fund with $100 million</a></li><li class="sc1f35f8"><a class="s48db07b" href="/eu-proposal-widens-russia-crypto-sanctions-to-third-countries/">EU proposal widens Russia crypto sanctions to third countries</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a><a href="/editorial-policy/">Editorial policy</a></nav>
+    <p class="s3c435f0">Independent crypto coverage, for information only.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
