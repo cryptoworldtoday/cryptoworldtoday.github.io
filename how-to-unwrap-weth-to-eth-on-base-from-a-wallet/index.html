@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en-US" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to unwrap WETH to ETH on Base with withdraw</title>
+<meta name="description" content="How to unwrap WETH to ETH on Base: call withdraw on the Base WETH contract to receive native ETH, with a little ETH set aside for gas first.">
+<link rel="canonical" href="https://cryptoworldtoday.github.io/how-to-unwrap-weth-to-eth-on-base-from-a-wallet/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="author" content="The Coin Wire Editorial"><meta property="og:type" content="article">
+<meta property="og:site_name" content="The Coin Wire">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to Unwrap WETH to ETH on Base from a Wallet">
+<meta property="og:description" content="How to unwrap WETH to ETH on Base: call withdraw on the Base WETH contract to receive native ETH, with a little ETH set aside for gas first.">
+<meta property="og:url" content="https://cryptoworldtoday.github.io/how-to-unwrap-weth-to-eth-on-base-from-a-wallet/">
+<meta property="og:image" content="https://cryptoworldtoday.github.io/assets/covers/how-to-unwrap-weth-to-eth-on-base-from-a-wallet-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Unwrap WETH to ETH on Base from a Wallet"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Unwrap WETH to ETH on Base from a Wallet">
+<meta name="twitter:description" content="How to unwrap WETH to ETH on Base: call withdraw on the Base WETH contract to receive native ETH, with a little ETH set aside for gas first.">
+<meta property="article:published_time" content="2026-11-27T22:49:18+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/saff387dd05.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="The Coin Wire" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoworldtoday.github.io/how-to-unwrap-weth-to-eth-on-base-from-a-wallet/#webpage",
+      "url": "https://cryptoworldtoday.github.io/how-to-unwrap-weth-to-eth-on-base-from-a-wallet/",
+      "name": "How to unwrap WETH to ETH on Base with withdraw",
+      "isPartOf": {
+        "@id": "https://cryptoworldtoday.github.io/#website"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://cryptoworldtoday.github.io/how-to-unwrap-weth-to-eth-on-base-from-a-wallet/#article",
+      "headline": "How to Unwrap WETH to ETH on Base from a Wallet",
+      "isAccessibleForFree": true,
+      "description": "How to unwrap WETH to ETH on Base: call withdraw on the Base WETH contract to receive native ETH, with a little ETH set aside for gas first.",
+      "datePublished": "2026-11-27T22:49:18+00:00",
+      "dateModified": "2026-11-27T22:49:18+00:00",
+      "url": "https://cryptoworldtoday.github.io/how-to-unwrap-weth-to-eth-on-base-from-a-wallet/",
+      "mainEntityOfPage": {
+        "@id": "https://cryptoworldtoday.github.io/how-to-unwrap-weth-to-eth-on-base-from-a-wallet/#webpage"
+      },
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "wordCount": 645,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-unwrap-weth-to-eth-on-base-from-a-wallet-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-unwrap-weth-to-eth-on-base-from-a-wallet-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://cryptoworldtoday.github.io/assets/covers/how-to-unwrap-weth-to-eth-on-base-from-a-wallet-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cryptoworldtoday.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to Unwrap WETH to ETH on Base from a Wallet",
+          "item": "https://cryptoworldtoday.github.io/how-to-unwrap-weth-to-eth-on-base-from-a-wallet/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoworldtoday.github.io/#org",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://cryptoworldtoday.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://cryptoworldtoday.github.io/editorial-policy/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoworldtoday.github.io/#website",
+      "name": "The Coin Wire",
+      "url": "https://cryptoworldtoday.github.io/",
+      "publisher": {
+        "@id": "https://cryptoworldtoday.github.io/#org"
+      },
+      "inLanguage": "en-US",
+      "description": "Crypto news on Bitcoin, Ethereum, DeFi, stablecoins, exchanges, regulation and protocol upgrades: what changed, and what comes next."
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s9b3a437" href="#main">Jump to content</a>
+<header class="s41cdb95">
+  <div class="s73f8009 sc0b118d">
+    <a class="s136bf07" href="/">The Coin Wire</a>
+    <p class="s275f137">Crypto moves, protocols and policy</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="s73f8009 s3d33b4c">
+  <div class="s6467b8e">
+    <header class="sf2736e8">
+      <h1>How to Unwrap WETH to ETH on Base from a Wallet</h1>
+<p class="s49052b3">How to unwrap WETH to ETH on Base: call withdraw on the Base WETH contract to receive native ETH, with a little ETH set aside for gas first.</p>      <p class="s8a437af s4327f24"><span>By The Coin Wire Editorial</span><time datetime="2026-11-27T22:49:18+00:00">Nov 27, 2026 · 22:49 UTC</time><span>4 min read</span></p>
+    </header>
+<figure class="sa67c37c"><img width="1200" height="630" fetchpriority="high" class="sbc2bd0b" src="/assets/covers/how-to-unwrap-weth-to-eth-on-base-from-a-wallet.jpg" alt="How to Unwrap WETH to ETH on Base from a Wallet"></figure>    <div class="s2d06d8e"><p>WETH on Base becomes native ETH when you call <strong>withdraw(amount)</strong> on the Base WETH contract; start with WETH in your wallet and a little ETH for gas, then confirm the transaction and check that WETH fell as ETH rose by the same amount.</p>
+<p>WETH is ETH held by a contract in an ERC-20 form. On Base, the WETH contract is the OP Stack predeploy at <strong>0x4200000000000000000000000000000000000006</strong>. Calling its withdraw function burns the specified WETH and releases the same amount of ETH, 1:1.</p>
+<p>The <a href="https://web3dailyreport.github.io/eth-for-base-gas-exchange-withdrawals-and-bridges/" rel="noopener">Base bridge</a> is a useful comparison because it moves supported assets between Ethereum and Base. Its ETH arrives on Base as native ETH, while WETH you receive from an app may need to be unwrapped. The distinction matters because native ETH pays Base gas.</p>
+<h2>What changes when you unwrap WETH?</h2>
+<p>Unwrapping changes the token form in your wallet, not the amount of value represented by the WETH. The contract takes WETH out of circulation and sends ETH to the wallet that called withdraw. The conversion itself has no slippage, router fee, or token approval step.</p>
+<p>That differs from swapping WETH for ETH through a decentralized exchange. A swap routes a trade through a pool or other trading path, where the received amount can depend on liquidity and the route can charge a fee. A direct withdraw is a contract call with a fixed 1:1 conversion; you pay the transaction’s Base gas, but there is no trade route to choose.</p>
+<p>Some wallet swap screens present WETH-to-ETH as a simple action. They can be convenient, but check whether the wallet is calling the WETH contract’s withdraw function or routing a swap. For a direct unwrap, the transaction should call the WETH contract and specify the amount to withdraw.</p>
+<h2>Unwrap WETH on Basescan</h2>
+<p>Use the WETH contract’s Write Contract tab to make the direct call. You’ll need a wallet connected to Base, WETH in that wallet, and a small native ETH balance to pay gas.</p>
+<ol>
+<li>Open the WETH contract page on Basescan for <strong>0x4200000000000000000000000000000000000006</strong>. Confirm the address before interacting; the address identifies the Base WETH predeploy.</li>
+<li>Open <strong>Write Contract</strong> and connect the wallet that holds the WETH. Make sure the connected wallet is on Base.</li>
+<li>Find <strong>withdraw</strong> and enter the amount in wei. WETH uses 18 decimal places, so <strong>1 WETH = 10<sup>18</sup> wei</strong>. For instance, a decimal WETH amount must be converted to its wei value before you submit it.</li>
+<li>Review the amount and confirm the transaction in your wallet. The call itself needs native ETH for gas, so a wallet holding only WETH cannot pay for this transaction. Get a small amount of ETH on Base first, then make the withdraw call.</li>
+<li>After the transaction completes, compare the wallet balances. The WETH balance should drop and the ETH balance should rise by the same amount, with gas paid separately from the ETH balance.</li>
+</ol>
+<h2>What to check before and after the call</h2>
+<p>The amount field is the detail most likely to trip up an otherwise straightforward unwrap. The contract expects an integer number of wei, not a human-readable decimal such as “0.25.” For 0.25 WETH, the input is 250000000000000000 wei. Check the decimal conversion before confirming; a misplaced zero changes the amount requested.</p>
+<p>Also check that the wallet has enough native ETH for gas before opening the transaction. WETH represents ETH, but the WETH balance is an ERC-20 balance and cannot pay the transaction fee for the call that releases native ETH. The gas amount varies with network conditions, so leave enough ETH in the wallet to cover the displayed fee.</p>
+<p>When the transaction is confirmed, the matching balance changes are the useful signal: less WETH, more native ETH by the same amount, and the gas fee accounted for separately. That confirms the contract released ETH to the wallet, ready to use for Base gas or other transactions on Base.</p></div>
+    <aside class="sed6d416">
+      <h2 class="sbeb5acb">Related coverage</h2>
+      <ul class="s5ae0a65 seafdcec">
+<li class="sc1f35f8"><a class="s48db07b" href="/sparklend-borrowing-modes-which-one-fits-your-loan/">SparkLend borrowing modes: Which one fits your loan?</a></li><li class="sc1f35f8"><a class="s48db07b" href="/how-to-bridge-eth-to-linea-for-a-first-deposit/">How to Bridge ETH to Linea for a First Deposit</a></li><li class="sc1f35f8"><a class="s48db07b" href="/eu-proposal-widens-russia-crypto-sanctions-to-evasion-networks/">EU proposal widens Russia crypto sanctions to evasion networks</a></li><li class="sc1f35f8"><a class="s48db07b" href="/is-it-safe-to-bridge-usdt-risks-and-safeguards/">Is It Safe to Bridge USDT? Risks and safeguards</a></li>      </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="s3edd5fd">
+  <div class="s73f8009 sac49ac1">
+    <p class="s3094be9">The Coin Wire</p>
+    <nav class="sf5cfcf5" aria-label="Site"><a href="/">Home</a><a href="/about/">About us</a><a href="/privacy/">Privacy policy</a><a href="/archive/">All articles</a><a href="/editorial-policy/">Editorial policy</a></nav>
+    <p class="s3c435f0">Independent crypto coverage, for information only.</p>
+    <p class="s8a1bb45">© 2026 The Coin Wire</p>
+  </div>
+</footer>
+</body>
+</html>
